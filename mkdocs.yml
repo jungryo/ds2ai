@@ -1,0 +1,75 @@
+site_name: DS2.AI
+site_url: https://dslab-clickai.github.io/ds2_ai
+site_author: dslab global.
+site_description: This is a webpage to show how to use the open source for DS2.AI
+theme:
+  logo: image/logo(white).png
+  extra:
+  homepage: https://ds2.ai
+  favicon: image/logo.png
+  palette:
+    primary: light blue
+    accent: light blue
+  name: material
+  include_search_page: true
+  sticky_navigation: true
+  
+
+nav:
+  - Recipes: 'recipes.md'
+  - 계정: 
+    - 계정 관리: 'account_01_create.md'
+    - 계정 구성: 'account_02_manage.md'
+  - DS2 DATASET | 데이터셋: 'dataset_00_overview.md'
+  - ㅤ학습 데이터 연동: 'dataset_01_upload.md'
+  - ㅤ공공 데이터 활용: 'dataset_02_public.md'
+  - ㅤ학습 데이터 결합: 'dataset_03_combine.md'
+    #  - 학습 데이터 정제: 'dataset_02_clean.md'
+    #  - 학습 데이터 수집: 'dataset_03_correct.md'
+  - Labeling AI | 라벨링 : 'label_00_overview.md'
+  - ㅤ라벨링 이란? : 'label_01_define.md'
+  - ㅤ물체인식 오토라벨링:
+    - ㅤCUSTOM AI: 'label_02-1_custom.md'
+    - ㅤGENERAL AI: 'label_02-2_general.md'
+  - ㅤ수동라벨링: 'label_03_manual.md'
+  - ㅤ정형데이터 오토라벨링  : 'label_02_create.md'
+  - ㅤ단일이미지분류 오토라벨링 : 'label_03_process.md'
+  - ㅤ라벨링 프로젝트 관리: '-.md'
+  #  - 라벨링 작업: 'label_03_process.md'
+  #  - 오토라벨링 : 'label_04_autolabel.md' 
+  - CLICK AI | 모델링 : 'click_00_overview.md'
+  - ㅤ인공지능 학습이란? : 'click_01_define.md'
+  - ㅤ커스텀 학습이란: 'click_02_custom.md'
+  - ㅤ커스텀 학습 이용하기: 'click_02-1_custom_utilize.md'
+  - ㅤAutoML이란: 'click_03_automl.md'
+  - ㅤAutoML 이용하기:
+    - ㅤ카테고리 분류 모델: 'click_03-1_category.md'
+    - ㅤ연속값 분류 모델: 'click_03-2_continuous.md'
+    - ㅤ시계열 처리 모델: 'click_03-3_timeseires.md'
+    - ㅤ자연어 처리 모델: 'click_03-4_nlp.md'
+    - ㅤ추천 시스템 모델: 'click_03-5_recommnedation.md'
+    - ㅤ이미지 분류 모델: 'click_03-6_image.md'
+
+    #  - Auto ML: 'click_02_automl.md'
+    #  - Custom Training: 'click_03_custom.md'
+    #  - Consulting : 'click_04_consulting.md'
+  - Skyhub AI | 배포: 'deploy_00_overview.md'
+  -  ㅤ소프웨어 배포하기란?  : 'deploy_01_define.md'
+  -  ㅤ배포 방법 : 'deploy_02_way.md'
+  -  ㅤ대시보드 : 'deploy_03_dashboard.md'
+  - AI Market:  'ds2_AImarket.md'
+  - ㅤQuick Start: 
+    - ㅤ감정분석 : '-.md'
+    - ㅤ사람인식 : '-.md'
+    - ㅤOCR : '-.md'
+    - ㅤ인물 골격 추출 : '-.md'
+    - ㅤ비식별화 : '-.md'
+    - ㅤ페이스 랜드 마크 : '-.md'
+    - ㅤ생활 공간 인식 : '-.md'
+  - ㅤCustom AI: '-.md'
+  - Help : 'ds2_help.md'
+  # - Release Notes: 'ds2_release_notes.md'
+
+markdown_extensions:
+  - attr_list
+  - admonition
