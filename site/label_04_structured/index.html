@@ -1,0 +1,1123 @@
+
+<!doctype html>
+<html lang="kr" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="This is a webpage to show how to use the open source for DS2.AI">
+      
+      
+      
+        <meta name="author" content="dslab global.">
+      
+      
+        <link rel="canonical" href="https://dslab-clickai.github.io/ds2_ai/label_04_structured/">
+      
+      <link rel="icon" href="../image/logo.png">
+      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-7.1.0">
+    
+    
+      
+        <title>ㅤ정형데이터 오토라벨링 - DS2.AI</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.33e2939f.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.ef6f36e2.min.css">
+        
+          
+          
+          <meta name="theme-color" content="#02a6f2">
+        
+      
+    
+    
+    
+      
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&display=fallback">
+        <style>:root{--md-text-font-family:"Roboto";--md-code-font-family:"Roboto Mono"}</style>
+      
+    
+    
+    
+    
+      
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="" data-md-color-primary="light-blue" data-md-color-accent="light-blue">
+  
+    
+    <script>function __prefix(e){return new URL("..",location).pathname+"."+e}function __get(e,t=localStorage){return JSON.parse(t.getItem(__prefix(e)))}</script>
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#_1" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+      <header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="DS2.AI" class="md-header__button md-logo" aria-label="DS2.AI" data-md-component="logo">
+      
+  <img src="../image/logo(white).png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            DS2.AI
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              ㅤ정형데이터 오토라벨링
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+      </label>
+      
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="검색" placeholder="검색" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" data-md-state="active" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </label>
+      <button type="reset" class="md-search__icon md-icon" aria-label="Clear" tabindex="-1">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"/></svg>
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="DS2.AI" class="md-nav__button md-logo" aria-label="DS2.AI" data-md-component="logo">
+      
+  <img src="../image/logo(white).png" alt="logo">
+
+    </a>
+    DS2.AI
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../recipes/" class="md-nav__link">
+        Recipes
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2" type="checkbox" id="__nav_2" >
+      
+      <label class="md-nav__link" for="__nav_2">
+        계정
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="계정" data-md-level="1">
+        <label class="md-nav__title" for="__nav_2">
+          <span class="md-nav__icon md-icon"></span>
+          계정
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../account_01_create/" class="md-nav__link">
+        계정 관리
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../account_02_manage/" class="md-nav__link">
+        계정 구성
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../dataset_00_overview/" class="md-nav__link">
+        DS2 DATASET | 데이터셋
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../dataset_01_upload/" class="md-nav__link">
+        ㅤ학습 데이터 연동
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../dataset_02_public/" class="md-nav__link">
+        ㅤ공공 데이터 활용
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../dataset_03_combine/" class="md-nav__link">
+        ㅤ학습 데이터 결합
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../label_00_overview/" class="md-nav__link">
+        Labeling AI | 라벨링
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../label_01_define/" class="md-nav__link">
+        ㅤ라벨링 이란?
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_9" type="checkbox" id="__nav_9" >
+      
+      <label class="md-nav__link" for="__nav_9">
+        ㅤ물체인식 오토라벨링
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="ㅤ물체인식 오토라벨링" data-md-level="1">
+        <label class="md-nav__title" for="__nav_9">
+          <span class="md-nav__icon md-icon"></span>
+          ㅤ물체인식 오토라벨링
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../label_02-1_custom/" class="md-nav__link">
+        ㅤCUSTOM AI
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../label_02-2_general/" class="md-nav__link">
+        ㅤGENERAL AI
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../label_03_manual/" class="md-nav__link">
+        ㅤ물체인식 수동라벨링
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          ㅤ정형데이터 오토라벨링
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        ㅤ정형데이터 오토라벨링
+      </a>
+      
+        
+<nav class="md-nav md-nav--secondary" aria-label="목차">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      목차
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1" class="md-nav__link">
+    1. 프로젝트 생성
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2" class="md-nav__link">
+    2. 클래스 입력 (결과값을 포함하지 않은 데이터)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3" class="md-nav__link">
+    3. 수동라벨링 (결과값을 포함하지 않은 데이터)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-custom-ai" class="md-nav__link">
+    4. Custom AI 만들기
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5" class="md-nav__link">
+    5. 오토라벨링 시작하기
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6-ai" class="md-nav__link">
+    6. 검수 및 라벨링 AI 고도화
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../label_05_image.md" class="md-nav__link">
+        ㅤ단일이미지분류 오토라벨링
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../label_06_management/" class="md-nav__link">
+        ㅤ라벨링 프로젝트 관리
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../click_00_overview/" class="md-nav__link">
+        CLICK AI | 모델링
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../click_01_define/" class="md-nav__link">
+        ㅤ인공지능 학습이란?
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../click_02_custom/" class="md-nav__link">
+        ㅤ커스텀 학습이란
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../click_02-1_custom_utilize/" class="md-nav__link">
+        ㅤ커스텀 학습 이용하기
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../click_03_automl/" class="md-nav__link">
+        ㅤAutoML이란
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_19" type="checkbox" id="__nav_19" >
+      
+      <label class="md-nav__link" for="__nav_19">
+        ㅤAutoML 이용하기
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="ㅤAutoML 이용하기" data-md-level="1">
+        <label class="md-nav__title" for="__nav_19">
+          <span class="md-nav__icon md-icon"></span>
+          ㅤAutoML 이용하기
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../click_03-1_category.md" class="md-nav__link">
+        ㅤ카테고리 분류 모델
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../click_03-2_continuous.md" class="md-nav__link">
+        ㅤ연속값 분류 모델
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../click_03-3_timeseires.md" class="md-nav__link">
+        ㅤ시계열 처리 모델
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../click_03-4_nlp.md" class="md-nav__link">
+        ㅤ자연어 처리 모델
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../click_03-5_recommnedation.md" class="md-nav__link">
+        ㅤ추천 시스템 모델
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../click_03-6_image.md" class="md-nav__link">
+        ㅤ이미지 분류 모델
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../deploy_00_overview/" class="md-nav__link">
+        Skyhub AI | 배포
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../deploy_01_define/" class="md-nav__link">
+        ㅤ소프웨어 배포하기란?
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../deploy_02_way/" class="md-nav__link">
+        ㅤ배포 방법
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../deploy_03_dashboard/" class="md-nav__link">
+        ㅤ대시보드
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ds2_AImarket/" class="md-nav__link">
+        AI Market
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_25" type="checkbox" id="__nav_25" >
+      
+      <label class="md-nav__link" for="__nav_25">
+        ㅤQuick Start
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="ㅤQuick Start" data-md-level="1">
+        <label class="md-nav__title" for="__nav_25">
+          <span class="md-nav__icon md-icon"></span>
+          ㅤQuick Start
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../-.md" class="md-nav__link">
+        ㅤ사람인식
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../-.md" class="md-nav__link">
+        ㅤOCR
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../-.md" class="md-nav__link">
+        ㅤ인물 골격 추출
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../-.md" class="md-nav__link">
+        ㅤ비식별화
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../-.md" class="md-nav__link">
+        ㅤ페이스 랜드 마크
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../-.md" class="md-nav__link">
+        ㅤ생활 공간 인식
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../-.md" class="md-nav__link">
+        ㅤCustom AI
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ds2_help/" class="md-nav__link">
+        Help
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary" aria-label="목차">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      목차
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1" class="md-nav__link">
+    1. 프로젝트 생성
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2" class="md-nav__link">
+    2. 클래스 입력 (결과값을 포함하지 않은 데이터)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3" class="md-nav__link">
+    3. 수동라벨링 (결과값을 포함하지 않은 데이터)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-custom-ai" class="md-nav__link">
+    4. Custom AI 만들기
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5" class="md-nav__link">
+    5. 오토라벨링 시작하기
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6-ai" class="md-nav__link">
+    6. 검수 및 라벨링 AI 고도화
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content" data-md-component="content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                
+                <h1 id="_1"><strong>정형 데이터 오토라벨링</strong></h1>
+<p>정형화 분류, 정형화 회귀(연속값), 자연어 데이터에 대한 수동라벨링, 오토라벨링이 가능합니다.<br />
+<strong>결과값을 포함하는 데이터, 결과값을 포함하지 않는 데이터</strong> 모두 라벨링 AI 를 이용할 수 있습니다. </p>
+<ol>
+<li><strong>결과값 포함하지 않는 데이터</strong>:  데이터 로드 → 수동라벨링 → custom ai 생성 → 오토 라벨링</li>
+<li><strong>결과값 포함 데이터</strong> : 데이터 로드 → custom ai 생성 → 데이터 추가하기(라벨링 전 데이터) → 오토라벨링</li>
+<li><strong>결과값 포함 + 포함하지 않은 데이터</strong> : 데이터 로드 → custom ai 생성 → 오토라벨링</li>
+</ol>
+<p>결과값을 포함하지 않는 데이터의 경우, 소량의 수동라벨링 진행 후 custom ai 를 생성하여 오토라벨링을 진행할 수 있으며,<br />
+결과값을 포함하는 데이터의 경우, 바로 custom ai 생성 후 라벨링 되지 않은 데이터를 추가하면 오토라벨링을 진행할 수 있습니다.</p>
+<h3 id="1"><strong>1. 프로젝트 생성</strong></h3>
+<p><img _hight="300px" alt="이미지이름" src="../image/labeling_ai/structured1.png" width="700px" />  </p>
+<p>LABELING AI의 [+라벨링 시작하기] 버튼 클릭시, DS2 DATASET 으로 이동합니다. </p>
+<p><img _hight="300px" alt="이미지이름" src="../image/labeling_ai/structured2.png" width="700px" />  </p>
+<p>데이터 리스트에서 원하는 데이터셋을 선택하거나, [데이터 추가하기]를 클릭하여 라벨링하고자 하는 파일을 업로드합니다.</p>
+<p><strong>데이터 추가하기</strong></p>
+<p><img _hight="300px" alt="이미지이름" src="../image/labeling_ai/structured3.png" width="700px" />  </p>
+<p>CSV 파일 형식을 선택한 후, 다음 클릭</p>
+<p><img _hight="300px" alt="이미지이름" src="../image/labeling_ai/structured4.png" width="700px" />  </p>
+<ul>
+<li>
+<p><strong>업로드 데이터에 결과값 칼럼이 포함되어 있는 경우</strong></p>
+<p><img _hight="300px" alt="이미지이름" src="../image/labeling_ai/structured5.png" width="700px" />  </p>
+<p>데이터 설정에서 '결과값 칼럼 선택' 옵션을 선택하고 결과값 칼럼명을 찾아 선택 후 [확인]을 클릭합니다.</p>
+</li>
+<li>
+<p><strong>데이터에 결과값 칼럼이 포함되어 있지 않은 경우</strong></p>
+<p><img _hight="300px" alt="이미지이름" src="../image/labeling_ai/structured6.png" width="700px" />  </p>
+<p>데이터 설정에서 '칼럼명 직접 입력' 옵션을 선택하고 라벨링 하려는 칼럼명을 입력 후 [확인]을 클릭합니다.</p>
+</li>
+</ul>
+<p><img _hight="300px" alt="이미지이름" src="../image/labeling_ai/structured7.png" width="700px" />  </p>
+<p>프로젝트 이름, 설명 및 카테고리 선택 후 [다음]을 클릭하면 프로젝트 생성이 완성됩니다.</p>
+<p><img _hight="300px" alt="이미지이름" src="../image/labeling_ai/structured8.png" width="700px" />  </p>
+<p>프로젝트 생성 [완료] 버튼을 클릭하면, 생성한 프로젝트 관리 창으로 이동하며,  "Labeling AI | 라벨링"을 클릭하면 프로젝트 리스트에 업데이트 되었음을 확인할 수 있습니다.</p>
+<h3 id="2"><strong>2. 클래스 입력 (결과값을 포함하지 않은 데이터)</strong></h3>
+<p><img _hight="300px" alt="이미지이름" src="../image/labeling_ai/structured9.png" width="700px" />  </p>
+<p>대시보드 "Classification"이 비어있다면, 클래스를 추가해야합니다. Classification의 "더보기" 또는  중간에 "클래스" 클릭합니다.</p>
+<p><img _hight="300px" alt="이미지이름" src="../image/labeling_ai/structured10.png" width="700px" />  </p>
+<p>[+클래스추가] 버튼을 클릭하여 라벨링 할 클래스명을 추가합니다.</p>
+<p><img _hight="300px" alt="이미지이름" src="../image/labeling_ai/structured11.png" width="700px" />  </p>
+<p>클래스 이름 및 색상 설정합니다. 클래스명은 영문으로 작성해야하며, 일부 특수문자의 사용만 가능합니다. 작성 후 [완료] 버튼을 클릭합니다. </p>
+<p><img _hight="300px" alt="이미지이름" src="../image/labeling_ai/structured12.png" width="700px" />  </p>
+<h3 id="3"><strong>3. 수동라벨링 (결과값을 포함하지 않은 데이터)</strong></h3>
+<p>정형화 데이터 중 분류 및 자연어 처리 데이터의 경우 각 클래스별 10개 이상의 수동라벨링을, 연속값 데이터의 경우 총 10개 이상의 수동라벨링을 진행하면, Custom AI 를 생성할 수 있습니다.</p>
+<p><img _hight="300px" alt="이미지이름" src="../image/labeling_ai/structured13.png" width="700px" />  </p>
+<p>'Classfication'의 클래스 생성이 완료되었다면, 프로젝트명 우측의 [수동라벨링 시작] 버튼을 클릭하여 수동 라벨링을 시작합니다.</p>
+<p><img _hight="300px" alt="이미지이름" src="../image/labeling_ai/structured14.png" width="700px" />  </p>
+<p>데이터 정보에 맞는 화면 하단의 클래스 중 선택하여 클릭하면, 데이터 정보 가장 우측 컬럼에 선택한 클래스가 설정됩니다. 확인 후 [저장] 및 [다음] 버튼을 클릭하여 라벨링을 진행합니다. </p>
+<p>라벨링을 잘못 입력하였을 경우 [이전] 버튼을 클릭하여 이미 작업된 데이터 라벨을 수정 및 저장할 수 있습니다.</p>
+<h3 id="4-custom-ai"><strong>4. Custom AI 만들기</strong></h3>
+<p><img _hight="300px" alt="이미지이름" src="../image/labeling_ai/structured15.png" width="700px" />  </p>
+<p>클래스별 객체 수가 10개 이상 확보되면, [CUSTOM AI 만들기] 버튼을 클릭하여 오토라벨링을 위한 인공지능을 생성합니다.</p>
+<p><img _hight="300px" alt="이미지이름" src="../image/labeling_ai/structured16.png" width="700px" />  </p>
+<p>라벨링 하고자 하는 클래스 선택 후 인공지능 개발 시작하기를 클릭합니다.</p>
+<p><img _hight="300px" alt="이미지이름" src="../image/labeling_ai/structured17.png" width="700px" />  </p>
+<p>AI 개발 시작 팝업이 뜹니다. 모델링 학습의 시작과 종료는 이메일 및  알림 내역을 통해 확인할 수 있습니다.</p>
+<h3 id="5"><strong>5. 오토라벨링 시작하기</strong></h3>
+<p>오토라벨링 하고자 하는 데이터를 추가합니다. (라벨링 하지 않은 데이터가 이미 업로드 되어있다면, 추가 없이 오토라벨링 할 수 있습니다. </p>
+<p>오토라벨링 시작하기 버튼을 클릭하면 오토라벨링이 시작됩니다.</p>
+<p>오토라벨링 시작과 종료는 이메일 및 알림 내역을 통해 확인할 수 있습니다.</p>
+<h3 id="6-ai"><strong>6. 검수 및 라벨링 AI 고도화</strong></h3>
+<p>오토라벨링 한 데이터가 올바르게 라벨링 되었는지 확인하고, 잘못 라벨링 된 데이터를 수정할 수 있습니다. </p>
+<p>또한 수정된 라벨 데이터로 CUSTOM AI를 재생성하면, 보다 정확한 오토라벨링 모델로 고도화 할 수 있습니다.</p>
+<p><br>
+<br>
+<br></p>
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+        
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <nav class="md-footer__inner md-grid" aria-label="Footer">
+      
+        <a href="../label_03_manual/" class="md-footer__link md-footer__link--prev" rel="prev">
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+          </div>
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                이전
+              </span>
+              ㅤ물체인식 수동라벨링
+            </div>
+          </div>
+        </a>
+      
+      
+        <a href="../label_06_management/" class="md-footer__link md-footer__link--next" rel="next">
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                다음
+              </span>
+              ㅤ라벨링 프로젝트 관리
+            </div>
+          </div>
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
+          </div>
+        </a>
+      
+    </nav>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+        Made with
+        <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+          Material for MkDocs
+        </a>
+        
+      </div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    <script id="__config" type="application/json">{"base": "..", "features": [], "translations": {"clipboard.copy": "\ud074\ub9bd\ubcf4\ub4dc\ub85c \ubcf5\uc0ac", "clipboard.copied": "\ud074\ub9bd\ubcf4\ub4dc\uc5d0 \ubcf5\uc0ac\ub428", "search.config.lang": "en", "search.config.pipeline": " ", "search.config.separator": "[\\s\\-]+", "search.placeholder": "\uac80\uc0c9", "search.result.placeholder": "\uac80\uc0c9\uc5b4\ub97c \uc785\ub825\ud558\uc138\uc694", "search.result.none": "\uac80\uc0c9\uc5b4\uc640 \uc77c\uce58\ud558\ub294 \ubb38\uc11c\uac00 \uc5c6\uc2b5\ub2c8\ub2e4", "search.result.one": "1\uac1c\uc758 \uc77c\uce58\ud558\ub294 \ubb38\uc11c", "search.result.other": "#\uac1c\uc758 \uc77c\uce58\ud558\ub294 \ubb38\uc11c", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing"}, "search": "../assets/javascripts/workers/search.fe42c31b.min.js", "version": null}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.d892486b.min.js"></script>
+      
+    
+  </body>
+</html>
