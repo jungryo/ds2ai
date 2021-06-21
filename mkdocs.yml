@@ -13,8 +13,8 @@ theme:
   name: material
   include_search_page: true
   sticky_navigation: true
+  language: kr
   
-
 nav:
   - Recipes: 'recipes.md'
   - 계정: 
@@ -31,10 +31,10 @@ nav:
   - ㅤ물체인식 오토라벨링:
     - ㅤCUSTOM AI: 'label_02-1_custom.md'
     - ㅤGENERAL AI: 'label_02-2_general.md'
-  - ㅤ수동라벨링: 'label_03_manual.md'
-  - ㅤ정형데이터 오토라벨링  : 'label_02_create.md'
-  - ㅤ단일이미지분류 오토라벨링 : 'label_03_process.md'
-  - ㅤ라벨링 프로젝트 관리: '-.md'
+  - ㅤ물체인식 수동라벨링: 'label_03_manual.md'
+  - ㅤ정형데이터 오토라벨링  : 'label_04_structured.md'
+  - ㅤ단일이미지분류 오토라벨링 : 'label_05_image.md'
+  - ㅤ라벨링 프로젝트 관리: 'label_06_management.md'
   #  - 라벨링 작업: 'label_03_process.md'
   #  - 오토라벨링 : 'label_04_autolabel.md' 
   - CLICK AI | 모델링 : 'click_00_overview.md'
@@ -59,7 +59,6 @@ nav:
   -  ㅤ대시보드 : 'deploy_03_dashboard.md'
   - AI Market:  'ds2_AImarket.md'
   - ㅤQuick Start: 
-    - ㅤ감정분석 : '-.md'
     - ㅤ사람인식 : '-.md'
     - ㅤOCR : '-.md'
     - ㅤ인물 골격 추출 : '-.md'

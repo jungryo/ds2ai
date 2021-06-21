@@ -1,99 +1,83 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"><url>
-     <loc>https://dslab-clickai.github.io/ds2_ai/recipes/</loc>
-     <lastmod>2021-06-17</lastmod>
+     <loc>None</loc>
+     <lastmod>2021-06-04</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
-     <loc>https://dslab-clickai.github.io/ds2_ai/account_01_create/</loc>
-     <lastmod>2021-06-17</lastmod>
+     <loc>None</loc>
+     <lastmod>2021-06-04</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
-     <loc>https://dslab-clickai.github.io/ds2_ai/account_02_manage/</loc>
-     <lastmod>2021-06-17</lastmod>
+     <loc>None</loc>
+     <lastmod>2021-06-04</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
-     <loc>https://dslab-clickai.github.io/ds2_ai/dataset_00_overview/</loc>
-     <lastmod>2021-06-17</lastmod>
+     <loc>None</loc>
+     <lastmod>2021-06-04</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
-     <loc>https://dslab-clickai.github.io/ds2_ai/dataset_01_upload/</loc>
-     <lastmod>2021-06-17</lastmod>
+     <loc>None</loc>
+     <lastmod>2021-06-04</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
-     <loc>https://dslab-clickai.github.io/ds2_ai/dataset_02_public/</loc>
-     <lastmod>2021-06-17</lastmod>
+     <loc>None</loc>
+     <lastmod>2021-06-04</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
-     <loc>https://dslab-clickai.github.io/ds2_ai/dataset_03_combine/</loc>
-     <lastmod>2021-06-17</lastmod>
+     <loc>None</loc>
+     <lastmod>2021-06-04</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
-     <loc>https://dslab-clickai.github.io/ds2_ai/label_00_overview/</loc>
-     <lastmod>2021-06-17</lastmod>
+     <loc>None</loc>
+     <lastmod>2021-06-04</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
-     <loc>https://dslab-clickai.github.io/ds2_ai/label_01_define/</loc>
-     <lastmod>2021-06-17</lastmod>
+     <loc>None</loc>
+     <lastmod>2021-06-04</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
-     <loc>https://dslab-clickai.github.io/ds2_ai/label_02-1_custom/</loc>
-     <lastmod>2021-06-17</lastmod>
+     <loc>None</loc>
+     <lastmod>2021-06-04</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
-     <loc>https://dslab-clickai.github.io/ds2_ai/label_02-2_general/</loc>
-     <lastmod>2021-06-17</lastmod>
+     <loc>None</loc>
+     <lastmod>2021-06-04</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
-     <loc>https://dslab-clickai.github.io/ds2_ai/label_02_create/</loc>
-     <lastmod>2021-06-17</lastmod>
+     <loc>None</loc>
+     <lastmod>2021-06-04</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
-     <loc>https://dslab-clickai.github.io/ds2_ai/label_03_process/</loc>
-     <lastmod>2021-06-17</lastmod>
+     <loc>None</loc>
+     <lastmod>2021-06-04</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
-     <loc>https://dslab-clickai.github.io/ds2_ai/click_00_overview/</loc>
-     <lastmod>2021-06-17</lastmod>
+     <loc>None</loc>
+     <lastmod>2021-06-04</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
-     <loc>https://dslab-clickai.github.io/ds2_ai/click_01_define/</loc>
-     <lastmod>2021-06-17</lastmod>
+     <loc>None</loc>
+     <lastmod>2021-06-04</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
-     <loc>https://dslab-clickai.github.io/ds2_ai/click_02_custom/</loc>
-     <lastmod>2021-06-17</lastmod>
+     <loc>None</loc>
+     <lastmod>2021-06-04</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
-     <loc>https://dslab-clickai.github.io/ds2_ai/click_02-1_custom_utilize/</loc>
-     <lastmod>2021-06-17</lastmod>
+     <loc>None</loc>
+     <lastmod>2021-06-04</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
-     <loc>https://dslab-clickai.github.io/ds2_ai/click_03_automl/</loc>
-     <lastmod>2021-06-17</lastmod>
+     <loc>None</loc>
+     <lastmod>2021-06-04</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
-     <loc>https://dslab-clickai.github.io/ds2_ai/deploy_00_overview/</loc>
-     <lastmod>2021-06-17</lastmod>
+     <loc>None</loc>
+     <lastmod>2021-06-04</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
-     <loc>https://dslab-clickai.github.io/ds2_ai/deploy_01_define/</loc>
-     <lastmod>2021-06-17</lastmod>
-     <changefreq>daily</changefreq>
-    </url><url>
-     <loc>https://dslab-clickai.github.io/ds2_ai/deploy_02_way/</loc>
-     <lastmod>2021-06-17</lastmod>
-     <changefreq>daily</changefreq>
-    </url><url>
-     <loc>https://dslab-clickai.github.io/ds2_ai/deploy_03_dashboard/</loc>
-     <lastmod>2021-06-17</lastmod>
-     <changefreq>daily</changefreq>
-    </url><url>
-     <loc>https://dslab-clickai.github.io/ds2_ai/ds2_AImarket/</loc>
-     <lastmod>2021-06-17</lastmod>
-     <changefreq>daily</changefreq>
-    </url><url>
-     <loc>https://dslab-clickai.github.io/ds2_ai/ds2_help/</loc>
-     <lastmod>2021-06-17</lastmod>
+     <loc>None</loc>
+     <lastmod>2021-06-04</lastmod>
      <changefreq>daily</changefreq>
     </url>
 </urlset>
