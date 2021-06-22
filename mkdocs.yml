@@ -59,7 +59,7 @@ nav:
     #  - Custom Training: 'click_03_custom.md'
     #  - Consulting : 'click_04_consulting.md'
   - Skyhub AI | 배포: 'deploy_00_overview.md'
-  -  ㅤ소프웨어 배포하기란?  : 'deploy_01_define.md'
+  -  ㅤ소프트웨어 배포하기란?  : 'deploy_01_define.md'
   -  ㅤ배포 방법 : 'deploy_02_way.md'
   -  ㅤ대시보드 : 'deploy_03_dashboard.md'
   - AI Market:  'ds2_AImarket.md'
