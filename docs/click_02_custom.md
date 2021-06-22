@@ -1,7 +1,7 @@
 
-# **Custom Training ** 
- 
-## **원하는 성능의 학습서버를 임대하여 Jupyter 환경에서 직접 인공지능 코딩 개발**
+# **커스텀 학습 ** 
+
+![이미지이름](./image_clickai/custom_main.png){: width="800px",hight="100px" }
 
 ## **1. Custom Training 이란 ?** 
 
@@ -26,21 +26,20 @@ Jupyter로의 복사 및 붙여넣기만으로 비전문가도 인공지능 개�
 
 백엔드 서버 구축 역량이 없어도 원하는 성능의 맞춤형 학습 서버를 선택하여 이용 가능합니다. 서버와 해당 지역을 선택하여 사용자에게 맞는 클라우드 학습 서버를 간편하게 설정해 보세요. 
 <center>
- ![이미지이름](./images/clickai/cloud.png){: width="400px",hight="300px" }
+ ![이미지이름](./images/clickai/cloud.png){: width="500px",hight="400px" }
 </center>
 
-## **4. Custom Training 비용**
+## **4. Custom Training 서버 비용**
 
 시간당 서버 이용량에 따라 청구되며 언제든지 사용을 종료할 수 있습니다. 프로젝트의 사용량에 서버의 확장 가능하고 유연한 가격 책정 옵션을 제공합니다.
 
 ## **5. Custom Training 대시보드**
 
-![이미지이름](./image/click_custom-1.png){: width="700px",hight="300px" }  
+![이미지이름](./image_clickai/custom_dash.png){: width="700px",hight="300px" }
 
 1. 학습 서버의 사용량을 확인할 수 있습니다. 
 2. 서버 추가를 하여 서버의 수를 늘려 처리 능력을 향상 시킬 수 있습니다. 수평 스케일로 각 서버에 걸리는 부하를 균등하게 해줍니다. 서버의 
 3. 프로젝트의 이름 수정 및 삭제가 가능합니다.
-
 
 
 <br>
