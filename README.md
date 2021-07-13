@@ -77,7 +77,7 @@ Executes development of Click AI immediately from loading data file without usin
 ds2.train(data_file, has_label_data=False, frame_value=60, training_method=None, 
     value_for_predict=None, option="accuracy"))
 ```
-
+![ezgif com-gif-maker (1)](https://user-images.githubusercontent.com/72846894/125380537-4c218c80-e3cd-11eb-85e7-cb8686f2cf7b.gif)
 
 ### 3. Deploy your AI model
 
@@ -98,7 +98,6 @@ Returns a the magic code for setting variable values ​​with optimal combinat
 ds2.get_magic_code(data_file, has_label_data=False, 
             frame_value=60,training_method=None, value_for_predict=None)
 ```
-
 ![4_getmagiccode](https://user-images.githubusercontent.com/72846894/125379392-68242e80-e3cb-11eb-858b-bd005085a501.gif)  
 
 
@@ -110,6 +109,8 @@ Rents an inference training server in prefered cloud environment for Custom trai
 ds2.rent_custom_training_server(cloud_type="AWS", region="us-west-1", 
                         server_type="g4dn.xlarge", name=None)
 ```
+![ezgif com-gif-maker (2)](https://user-images.githubusercontent.com/72846894/125380727-9efb4400-e3cd-11eb-824b-676d670941b5.gif)  
+
 
 ## **Getting Help**
 
