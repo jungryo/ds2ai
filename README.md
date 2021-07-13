@@ -45,7 +45,7 @@ ds2 = ds2ai.DS2(token)
 ```
 
 Then you can use all functions in [DS2.](http://ds2.Au)ai SDK.
-
+---
 
 ## Top 5 Features of [DS2.ai](http://ds2.ai/) SDK 
 
