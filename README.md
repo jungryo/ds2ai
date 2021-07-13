@@ -28,10 +28,11 @@ $pip install -i https://test.pypi.org/simple/ ds2ai==0.20
 
 ### 1. Getting your own token
 
-To use the SDK, you need to get a token, and you can check the token by registering as a member of [console.ds2.ai](http://console.ds2.ai/). After registering the card on the site, you can use the token.
+To use the SDK, you need to get a token, and you can check the token by registering as a member of [console.ds2.ai](http://console.ds2.ai/). After registering the card on the site, you can use the token.  
 
-![get_token (1)](https://user-images.githubusercontent.com/72846894/124224654-0b11b880-db41-11eb-8764-90dc1d2cf469.gif)  
-
+<center>
+<img width="2000" src="https://user-images.githubusercontent.com/72846894/124224654-0b11b880-db41-11eb-8764-90dc1d2cf469.gif"/>
+</center>
 
 ### 2. Activate
 
@@ -66,7 +67,7 @@ ds2.start_auto_labeling(data_file, amount, has_label_data=False, predict_column_
             preprocessing_ai_type={}, labeling_class=None, workapp="object_detection")
                           
 ```
-![1_startautolabeling](https://user-images.githubusercontent.com/72846894/125379543-a883ac80-e3cb-11eb-8db3-19dbc2c1b859.gif)  
+<img width="2800" src="https://user-images.githubusercontent.com/72846894/125379543-a883ac80-e3cb-11eb-8db3-19dbc2c1b859.gif"/>
 
 
 ### 2. AI Training
@@ -77,7 +78,7 @@ Executes development of Click AI immediately from loading data file without usin
 ds2.train(data_file, has_label_data=False, frame_value=60, training_method=None, 
     value_for_predict=None, option="accuracy"))
 ```
-![ezgif com-gif-maker (1)](https://user-images.githubusercontent.com/72846894/125380537-4c218c80-e3cd-11eb-85e7-cb8686f2cf7b.gif)
+<img width="2800" src="https://user-images.githubusercontent.com/72846894/125380537-4c218c80-e3cd-11eb-85e7-cb8686f2cf7b.gif"/>
 
 ### 3. Deploy your AI model
 
@@ -87,7 +88,7 @@ Deploys AI models to cloud servers with specifications under the desired hosting
 ds2.deploy(model_file, name=None, cloud_type="AWS", region="us-west-1", 
     server_type="g4dn.xlarge")
 ```
-![3_deploy](https://user-images.githubusercontent.com/72846894/125379607-c7823e80-e3cb-11eb-85ce-c0cd35cfa588.gif)  
+<img width="2800" src="https://user-images.githubusercontent.com/72846894/125379607-c7823e80-e3cb-11eb-85ce-c0cd35cfa588.gif"/>   
 
 
 ### 4. Getting magic code
@@ -98,7 +99,7 @@ Returns a the magic code for setting variable values ​​with optimal combinat
 ds2.get_magic_code(data_file, has_label_data=False, 
             frame_value=60,training_method=None, value_for_predict=None)
 ```
-![4_getmagiccode](https://user-images.githubusercontent.com/72846894/125379392-68242e80-e3cb-11eb-858b-bd005085a501.gif)  
+<img width="2800" src="https://user-images.githubusercontent.com/72846894/125379392-68242e80-e3cb-11eb-858b-bd005085a501.gif"/>   
 
 
 ### 5. Rent AI training server
@@ -109,7 +110,7 @@ Rents an inference training server in prefered cloud environment for Custom trai
 ds2.rent_custom_training_server(cloud_type="AWS", region="us-west-1", 
                         server_type="g4dn.xlarge", name=None)
 ```
-![ezgif com-gif-maker (2)](https://user-images.githubusercontent.com/72846894/125380727-9efb4400-e3cd-11eb-824b-676d670941b5.gif)  
+<img width="2800" src="https://user-images.githubusercontent.com/72846894/125380727-9efb4400-e3cd-11eb-824b-676d670941b5.gif"/>   
 
 
 ## **Getting Help**
