@@ -1,7 +1,7 @@
 
 
 The official [DS2.ai](http://ds2.ai/) SDK for Python.  
-Documentation can be found on [SDK guide](https://docs.ds2.ai/sdk_00_readme.md)
+Documentation can be found on [SDK guide](https://docs.ds2.ai/sdk_00_readme.md).
 
 # MLOps with DS2.ai
 
@@ -68,7 +68,7 @@ ds2.start_auto_labeling(data_file, amount, has_label_data=False, predict_column_
 ```
 This function executes auto-labeling immediately from loading data file without using dataconnector. The major parameters include data_file to auto-label, whether the data includes labeled data for a certain part of the dataset, and the type of auto-labeling, such as “box”, which will label using bounding boxes.
 
-<img width="2800" src="https://user-images.githubusercontent.com/72846894/125550615-820bcb0f-cd23-4dac-a1d8-818c609c8c8f.gif"/>
+<img width="2800" src="https://user-images.githubusercontent.com/72846894/125561952-79a2e8f8-4f3f-4def-bdca-848b6d19e423.gif"/>
 <br>
 
 ### 2. AI Training
